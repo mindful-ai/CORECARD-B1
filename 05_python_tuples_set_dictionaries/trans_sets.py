@@ -26,6 +26,8 @@ Type "help", "copyright", "credits" or "license()" for more information.
 {'j', 'd', 'c', 'i', 'h', 'b', 'a'}
 >>> 
 >>> 
+
+# The set related functions...
 >>> s1.add('x')
 >>> s1
 {'f', 'd', 'c', 'g', 'e', 'x', 'b', 'a'}

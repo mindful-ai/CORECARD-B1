@@ -10,3 +10,6 @@ def getindeces(item, collection):
     else:
         return False
      
+
+def getfactors(n):
+    pass

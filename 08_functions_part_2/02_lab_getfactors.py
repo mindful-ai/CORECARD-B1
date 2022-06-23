@@ -8,6 +8,6 @@
 # input
 
 # process
-# calling the get factors
+# calling the getfactors() from myfunctions module
 
 # output

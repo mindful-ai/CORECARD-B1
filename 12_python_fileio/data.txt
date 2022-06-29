@@ -1,0 +1,4 @@
+There are data coming to my system from multiple sources MySQL, logs and including occasional files uploads.
+The data comes both static and dynamic way i.e. real-time data as well as batch data.
+I have to build a system which combines all these data inputs and prepares analytics over it.
+PySpark is just a Python wrapper around Apache Spark which is written in Scala programming language.

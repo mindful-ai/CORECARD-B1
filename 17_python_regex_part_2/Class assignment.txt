@@ -1,0 +1,15 @@
+# Write a program to print the number of years
+# required to multiply the invested money
+# given the rate of interest per year
+
+'''
+
+P -> 10000
+R -> 3 
+MV -> 14000
+
+OUTPUT:
+	It will take 4 years for the principle amount to mature to 14000
+'''
+
+ 

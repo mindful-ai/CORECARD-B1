@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3>This is a form example</h3>
+    <form class="" action="{{url_for('process')}}" method="POST" enctype="multipart/form-data">
+      <label for="fname">First Name</label>
+      <input type="text" name="fname" value="Ram"> <br>
+      <label for="mname">Middle Name</label>
+      <input type="text" name="mname" value="Gopal"> <br>
+      <label for="lname">Last Name</label>
+      <input type="text" name="lname" value="Verma"> <br>
+
+      <hr>
+      <h3>Gender</h3>
+      <input type="radio" name="gender" value="Male" checked> Male <br>
+      <input type="radio" name="gender" value="Female"> Female<br>
+
+      <hr>
+
+      <h3>Games Interested</h3>
+      <input type="checkbox" name="volley" value="Volley"> Volley Ball <br>
+      <input type="checkbox" name="foot" value="Foot"> Foot Ball<br>
+      <input type="checkbox" name="basket" value="Basket"> Basket Ball <br>
+      <input type="checkbox" name="base" value="Base"> Base Ball<br>
+
+      <hr>
+
+      <h3>Choose Color</h3>
+      <input type="color" name="color"> <br>
+
+      <hr>
+
+      <h3>Choose Coding Efficiency</h3>
+      <input type="range" min='0' max='10' name="eff" value=""> <br>
+
+      <hr>
+
+      <h3>Date and Time of Birth</h3>
+      <input type="datetime-local" name="dtob" id="dtob">
+      <h3>Email ID</h3>
+      <input type="email" name="email">
+      <h3>Password</h3>
+      <input type="password" name="pass">
+
+      <hr>
+
+      <h3>Upload Certificate</h3>
+      <input type="file" name="cert">
+      <h3>About</h3>
+      <textarea name="name" rows="8" cols="80"></textarea>
+
+      <hr>
+
+      <input type="reset" name="reset" value="Reset">
+      <input type="submit" name="submit" value="Submit">
+
+    </form>
+  </body>
+</html>

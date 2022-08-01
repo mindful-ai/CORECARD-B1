@@ -1,0 +1,7 @@
+Using the data in https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv
+How many products cost more than $10.00?
+What is the price of each item? (print a data frame with only two columns item_name and item_price)
+Sort by the name of the item
+What was the quantity of the most expensive item ordered?
+How many times were a Veggie Salad Bowl ordered?
+How many times people orderd more than one Canned Soda?

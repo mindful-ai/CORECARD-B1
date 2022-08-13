@@ -1,0 +1,6 @@
+Solve the towers of Hanoi problem using recustion
+Deliverables:
+
+1. How towers of Hanoi is played? - a simple ppt
+2. Logic to solve towers of hanoi using recursion
+3. Code

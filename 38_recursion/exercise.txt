@@ -1,0 +1,13 @@
+Print the following pattern using recursion
+
+9 😃 😃 😃 😃 😃 😃 😃 😃 😃
+7 😃 😃 😃 😃 😃 😃 😃
+5 😃 😃 😃 😃 😃
+3 😃 😃 😃
+1 😃
+Zero!
+
+Refer: https://unicode.org/emoji/charts/emoji-list.html#1f62c
+
+Example: print('\U0001F920')
+

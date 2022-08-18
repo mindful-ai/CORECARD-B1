@@ -1,0 +1,97 @@
+4 1 3 2 5
+
+
+Pass 1:
+
+    4 1 3 2 5
+
+    start_index = 0
+    min = L[start_index]
+
+    min > L[start_index + 1]
+        swap values
+    min > L[start_index + 2]
+        swap values
+    min > L[start_index + 3]
+        swap values
+
+    ...
+    ...
+
+    if(current_index == len(list) - 1)
+        stop;
+
+
+    Result of the first pass
+    4 1 3 2 5
+    1 4 3 2 5
+
+pass 2:
+
+    start_index = 1
+    min = L[start_index]
+
+    min > L[start_index + 1]
+        swap values
+    min > L[start_index + 2]
+        swap values
+    min > L[start_index + 3]
+        swap values
+
+    ...
+    ...
+
+    if(current_index == len(list) - 1)
+        stop;
+
+
+    Result of the first pass
+    1 4 3 2 5
+    1 3 4 2 5
+    1 2 4 3 5
+
+pass 3:
+
+    start_index = 2
+    min = L[start_index]
+
+    min > L[start_index + 1]
+        swap values
+    min > L[start_index + 2]
+        swap values
+    min > L[start_index + 3]
+        swap values
+
+    ...
+    ...
+
+    if(current_index == len(list) - 1)
+        stop;
+
+
+    Result of the first pass
+    1 2 4 3 5   
+    1 2 3 4 5
+
+pass 4:
+
+    start_index = 3
+    min = L[start_index]
+
+    min > L[start_index + 1]
+        swap values
+    min > L[start_index + 2]
+        swap values
+    min > L[start_index + 3]
+        swap values
+
+    ...
+    ...
+
+    if(current_index == len(list) - 1)
+        stop;
+
+
+    Result of the first pass
+    1 2 3 4 5  
+

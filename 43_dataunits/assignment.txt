@@ -1,0 +1,3 @@
+Accept numeric values from the user and
+Store it as a linked list
+Write an algorithm to search if there is a prime number in the linked list

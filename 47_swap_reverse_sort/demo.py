@@ -99,14 +99,31 @@ def swap(a, b):
         
 
 
-        
+def bubble(root):
+    pass
 
         
 
 # reverse the list
+from copy import deepcopy
 def reverse():
     global root
-    pass
+    prev = deepcopy(root)
+    prev.setlink(None)
+    curr = deepcopy(root.getlink())
+    pointer = deepcopy(root.getlink())
+    while True:
+        print(prev.getdata(), curr.getdata())
+        curr.setlink(prev)
+        prev = deepcopy(curr)
+        curr = deepcopy(pointer.getlink())
+        pointer = pointer.getlink()
+        if(pointer.getlink() == None):
+            curr.setlink(prev)
+            break
+    print(curr.getdata())
+    root = deepcopy(curr)
+
     
 
 
@@ -119,8 +136,19 @@ def reverse():
 #listinsert(root, 2, dataunit(100))
 traverse(root)
 print("--------------------------------------")
-swap(2, 3)
+reverse()
 traverse(root)
 
+prev = root
+print(prev.getdata(), root.getdata())
+prev.setdata(90)
+print(prev.getdata(), root.getdata())
+
+print('---------------')
+
+prev = deepcopy(root)
+print(prev.getdata(), root.getdata())
+prev.setdata(1000)
+print(prev.getdata(), root.getdata())
 
 

@@ -136,6 +136,16 @@ class DoublyLinkedList:
 			print(" {}".format(last.data))
 			last = last.prev
 
+	def deleteNode(self, delete):
+		if self.head==None or delete == None:
+			return
+		if self.head == delete:
+			self.head = delete.next
+		if delete.next != None:
+			delete.prev.next = delete.prev
+		if delete.prev != None:
+			delete.prev.next = delete.next
+
 
 # Start with empty list
 if __name__ == "__main__":

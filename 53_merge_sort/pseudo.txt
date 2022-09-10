@@ -1,0 +1,31 @@
+Reg -> left and right should be in sorted order
+merge(target -> M, left -> L, right -> R)   -> 
+    L <- M[:mid]
+    R <- M[mid:]
+
+    nl <- length(L)
+    nr <- length(R)
+
+    p <- 0
+    q <- 0
+    r <- 0
+
+    while(p < nl && q < nr)
+        if L[p] <= R[q]
+            M[r] <- L[p]
+            r <- r + 1
+            p <- p + 1
+        else
+            M[r] <- R[q]
+            r <- r + 1
+            q <- q + 1
+
+    while q < nr
+        M[r] <- R[q]
+        r <- r + 1
+        q <- q + 1
+
+    while p < nl
+        M[r] <- L[p]
+        r <- r + 1
+        p <- p + 1

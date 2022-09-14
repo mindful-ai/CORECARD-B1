@@ -1,0 +1,29 @@
+partition(a, l, h):
+
+    pivot = a[l]
+    i = l
+    j = h
+
+    while(i < j):
+
+        while(a[i] <= pivot):
+            i += 1
+        
+        while(a[j] > pivot):
+            j -= 1
+
+        if(i < j):
+            swap(a[i], a[j])
+
+    swap(a[l], a[j])
+
+    return j
+    
+quicksort(arr, l, h):
+
+    if(l < h):
+        j = partition(arr, l , h)
+        quicksort(arr, l, j)
+        quicksort(arr, j+1, h)
+
+    return arr

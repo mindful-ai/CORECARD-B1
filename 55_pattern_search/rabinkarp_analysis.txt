@@ -1,0 +1,54 @@
+seq = a a a a a b a b a b c 
+
+pat = a b c
+
+-------------------------------------
+
+a = 1
+b = 2
+c = 3
+
+pat = a b c 
+      1 2 3  (add/mul)
+      1 + 2 + 3 = 6 -> hash value of the pattern
+      hash function
+
+
+-------------------------------------
+
+seq = [a a a] a a b a b a b c 
+        3
+
+seq = a [a a a] a b a b a b c 
+            3
+
+seq = a a [a a a] b a b a b c 
+              3
+
+seq = a a a [a a b] a b a b c 
+                4
+
+seq = a a a a [a b a] b a b c 
+                    4
+
+seq = a a a a a [b a b] a b c 
+                    5
+
+
+.
+.
+.
+.
+
+seq = a a a a a b a b [a b c ]
+                            6
+seq[i:j] == pat[:] -> compare this charecter by charecter
+
+seq = a a a a [c a b] a b [b a c ] -> spurious hits
+                6           6
+
+Hash value only indicates that there is a possibility of the pattern Match
+
+spurious hit -> when the hash value matchs but the there is no pattern
+we want to avoid/minimize the spurious hits, we will avoid unnecessary comparisons
+by reducing spurious hits we reduce time complexity

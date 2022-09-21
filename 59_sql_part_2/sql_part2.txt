@@ -1,0 +1,72 @@
+create database newdb;
+use newdb;
+
+CREATE TABLE CUSTOMERS(
+   ID INT  NOT NULL,
+   NAME  VARCHAR (20) NOT NULL,
+   AGE   INT  NOT NULL,
+   ADDRESS  CHAR (25) ,
+   SALARY  DECIMAL (18, 2),       
+   PRIMARY KEY (ID)
+);
+
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) VALUES (1, 'Ramesh', 32, 'Ahmedabad', 2000.00);
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) VALUES (2, 'Khilan', 25, 'Delhi', 1500.00 );
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) VALUES (3, 'Kaushik', 23, 'Kota', 2000.00 );
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) VALUES (4, 'Chaitali', 25, 'Mumbai', 6500.00 );
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) VALUES (5, 'Hardik', 27, 'Bhopal', 8500.00 );
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) VALUES (6, 'Komal', 22, 'MP', 4500.00 );
+
+select * from customers;
+
+CREATE TABLE CUSTOMERS2(
+   ID INT  NOT NULL,
+   NAME  VARCHAR (20) NOT NULL,
+   SALARY  DECIMAL (18, 2),       
+   PRIMARY KEY (ID)
+);
+
+/* ----------------------------------------------------------------------------------------------  */
+
+/* Transfer data from one table to another */
+
+insert into customers2(id, name, salary) select id, name, salary from customers where salary > 5000;
+select * from customers2;
+
+/* LIke clause */
+select * from customers where salary like '200%';
+
+/* Regular expression */
+select * from customers where name regexp '.*ar..';
+
+/* Sorting */
+select * from customers order by name, salary;
+select * from customers order by name desc;
+
+/* Grouping */
+select name, sum(salary) from customers group by name;
+
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) VALUES (7, 'Ramesh', 32, 'Ahmedabad', 3000.00);
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) VALUES (8, 'Ramesh', 32, 'Ahmedabad', 4000.00);
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) VALUES (9, 'Ramesh', 32, 'Ahmedabad', 5000.00);
+select * from customers;
+
+select name, sum(salary) from customers group by name;
+
+/* sorting outcomes */
+
+select * from customers
+	order by( case address 
+		when 'delhi' then 1
+        when 'bhopal' then 2
+        when 'kota' then 3
+        else 100 end) asc, address desc;
+        
+        
+/* Eliminating duplicates */
+
+select distinct name, salary from customers order by name;
+
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) VALUES (10, 'Ramesh', 32, 'Ahmedabad', 3000.00);
+select * from customers;
+select distinct name, salary from customers order by name;

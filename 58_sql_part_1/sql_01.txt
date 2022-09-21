@@ -1,0 +1,36 @@
+create database newdb;
+use newdb;
+
+create table customers (
+	id int not null,
+    name varchar(20) not null,
+    age int not null,
+    address char(25) ,
+    salary  decimal(18, 2),       
+    primary key(id)
+);
+
+show tables;
+
+insert into customers values (1, "Rajesh", 35, "J P Nagar, Bangalore", "1400000.00");
+insert into customers (id, name, age, address, salary) values(2, "Ramesh", 36, "Banshankari, Bangalore", "1500000.00");
+insert into customers (id, name, age, address, salary) values(3, "Kaushik", 31, "Jayanagar, Bangalore", "1700000.00");
+insert into customers (id, name, age, address, salary) values(4, "Smitha", 32, "Malleshwaram, Bangalore", "1800000.00");
+insert into customers (id, name, age, address, salary) values(5, "Kumar", 33, "Rajajinagar, Bangalore", "1900000.00");
+insert into customers (id, name, age) values (6, "Sunil", 45);
+select * from customers;
+select id, name, salary from customers;
+
+select * from customers where salary > 1700000;
+select id, name from customers where salary >= 1700000;
+
+select * from customers where salary > 1700000 and age <= 33;
+select id, name from customers where salary > 1700000 or age <= 33;
+
+update customers set address = "Vijayanagar, Bangalore", salary = "1800000.00" where id = 6;
+update customers set salary = "1800000.00" where id < 5;
+
+delete from customers where id = 6;
+drop table customers;
+
+drop database newdb;

@@ -74,6 +74,18 @@ FROM
 	employees
 GROUP BY
 	department_id;
+	
+	
+/* Group By */
+
+SELECT
+	department_id,
+	COUNT(employee_id) headcount
+FROM
+	employees
+GROUP BY
+	department_id;
+
     
 /* Alter Table */
 

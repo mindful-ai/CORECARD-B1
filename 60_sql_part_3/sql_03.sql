@@ -12,7 +12,6 @@ FROM
 WHERE
     employees.department_id IN (1 , 2, 3);
     
-    
 /* left join */
 SELECT
 	c.country_name,
@@ -23,6 +22,47 @@ SELECT
 FROM
 	countries c
 LEFT JOIN locations l ON l.country_id = c.country_id
+WHERE
+	c.country_id IN ('US', 'UK', 'CN');
+
+/* right join */
+
+SELECT
+	c.country_name,
+	c.country_id,
+	l.country_id,
+	l.street_address,
+	l.city
+FROM
+	countries c
+RIGHT JOIN locations l ON l.country_id = c.country_id
+WHERE
+	c.country_id IN ('US', 'UK', 'CN');
+    
+/* right outer join */
+
+SELECT
+	c.country_name,
+	c.country_id,
+	l.country_id,
+	l.street_address,
+	l.city
+FROM
+	countries c
+RIGHT OUTER JOIN locations l ON l.country_id = c.country_id
+WHERE
+	c.country_id IN ('US', 'UK', 'CN');
+
+/* left outer join */
+SELECT
+	c.country_name,
+	c.country_id,
+	l.country_id,
+	l.street_address,
+	l.city
+FROM
+	countries c
+LEFT OUTER JOIN locations l ON l.country_id = c.country_id
 WHERE
 	c.country_id IN ('US', 'UK', 'CN');
     

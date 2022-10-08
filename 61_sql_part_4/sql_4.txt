@@ -1,0 +1,86 @@
+create database newdb;
+use newdb;
+
+create table courses(
+	employee_id INT,
+    course_id INT,
+    taken_date DATE,
+    PRIMARY KEY (employee_id, course_id)
+);
+
+select * from courses;
+
+alter table courses add credit_hours int not null;
+alter table courses add fee NUMERIC(10, 2) AFTER course_id, ADD course_name VARCHAR(50) after taken_date;
+
+insert into courses values (1, 445, 1500.00, cast("2021-09-12" as datetime), "python", 40);
+
+alter table courses modify fee numeric(10, 2) not null;
+alter table courses drop column fee;
+
+
+# ------------------------------------------------------------------------------------------------------------- #
+
+create table employees (
+	id int not null,
+    name varchar(20) not null,
+    age int not null,
+    addr char(25),
+    salary decimal(18, 2),
+    primary key (id)
+);
+
+show tables;
+
+insert into employees value (1, "Rajesh", 35, "J P Nagar, Bangalore", "1400000.00");
+insert into employees (id, name, age, addr, salary) values (2, "Ramesh", 36, "Banashankari, Bangalore", "1500000.00");
+insert into employees (id, name, age, addr, salary) values (3, "Kaushik", 36, "Jayanagar, Bangalore", "1600000.00");
+insert into employees (id, name, age, addr, salary) values (4, "Smitha", 37, "Malleshwaram, Bangalore", "1700000.00");
+insert into employees (id, name, age, addr, salary) values (5, "Kumar", 38, "Rajajinagar, Bangalore", "1800000.00");
+
+delimiter $$
+create procedure getdata()
+begin
+	select * from employees;
+end$$
+delimiter ;
+
+call getdata();
+
+/* with input parameters */
+
+delimiter $$
+create procedure getdata2(in empid int)
+begin
+	select * from employees where id = empid;
+end$$
+delimiter ;
+
+call getdata2(3);
+
+/* with output parameters */
+
+delimiter $$
+create procedure getaveragesalary(out avgsal decimal)
+begin
+	select avg(salary) into avgsal from employees;
+end$$
+delimiter ;
+
+/* with inout parameters */
+
+delimiter $$
+create procedure getinfo(inout num decimal)
+begin
+	select salary into num from employees where id = num;
+    /* alternatively set num = whatever can be used to output as well */
+end$$
+delimiter ;
+
+#drop procedure if exists getinfo;
+select * from employees;
+set @var = 5;
+call getinfo(@var);
+select @var;
+
+

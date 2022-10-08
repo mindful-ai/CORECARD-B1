@@ -1,0 +1,21 @@
+Few programming languages provide direct support for graphs as a data type, and Python is no exception. 
+However, graphs are easily built out of lists and dictionaries. For instance, here's a simple graph
+
+    A -> B
+    A -> C
+    B -> C
+    B -> D
+    C -> D
+    D -> C
+    E -> F
+    F -> C
+
+This graph has six nodes (A-F) and eight arcs. It can be represented by the following Python data structure:
+
+graph = {'A': ['B', 'C'],
+             'B': ['C', 'D'],
+             'C': ['D'],
+             'D': ['C'],
+             'E': ['F'],
+             'F': ['C']}
+

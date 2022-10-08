@@ -1,0 +1,109 @@
+Analysis of algorithm is the process of analyzing the problem-solving capability of the algorithm 
+in terms of the time and size required (the size of memory for storage while implementation).
+
+Generally, we perform the following types of analysis −
+
+Worst-case − The maximum number of steps taken on any instance of size a.
+Best-case − The minimum number of steps taken on any instance of size a.
+Average case − An average number of steps taken on any instance of size a.
+Amortized − A sequence of operations applied to the input of size a averaged over time.
+
+--------------------------------------------------------
+
+To solve a problem, we need to consider time as well as space complexity as the program may 
+run on a system where memory is limited but adequate space is available or may be vice-versa. 
+In this context, if we compare bubble sort and merge sort. Bubble sort does not require additional memory, 
+but merge sort requires additional space. Though time complexity of bubble sort is higher compared to merge sort, 
+we may need to apply bubble sort if the program needs to run in an environment, where memory is very limited.
+
+In designing of Algorithm, complexity analysis of an algorithm is an essential aspect. 
+Mainly, algorithmic complexity is concerned about its performance, how fast or slow it works.
+
+The complexity of an algorithm describes the efficiency of the algorithm in terms of the amount of the memory 
+required to process the data and the processing time.
+
+Complexity of an algorithm is analyzed in two perspectives: Time and Space.
+
+--------------------------------------------------------
+
+Time Complexity
+It’s a function describing the amount of time required to run an algorithm in terms of the size of the input. 
+"Time" can mean the number of memory accesses performed, the number of comparisons between integers, the number of 
+times some inner loop is executed, or some other natural unit related to the amount of real time the algorithm will take.
+
+Space Complexity
+It’s a function describing the amount of memory an algorithm takes in terms of the size of input to the algorithm.
+ We often speak of "extra" memory needed, not counting the memory needed to store the input itself. 
+ Again, we use natural (but fixed-length) units to measure this.
+
+Space complexity is sometimes ignored because the space used is minimal and/or obvious, 
+however sometimes it becomes as important an issue as time.
+
+--------------------------------------------------------
+
+Asymptotic Notations
+Execution time of an algorithm depends on the instruction set, processor speed, disk I/O speed, etc. 
+Hence, we estimate the efficiency of an algorithm asymptotically.
+
+Time function of an algorithm is represented by T(n), where n is the input size.
+
+Different types of asymptotic notations are used to represent the complexity of an algorithm. 
+Following asymptotic notations are used to calculate the running time complexity of an algorithm.
+
+O − Big Oh
+Ω − Big omega
+θ − Big theta
+o − Little Oh
+ω − Little omega
+
+--------------------------------------------------------
+
+‘O’ (Big Oh) is the most commonly used notation. 
+A function f(n) can be represented is the order of g(n) that is O(g(n)), 
+if there exists a value of positive integer n as n0 and a positive constant c such that −
+
+f(n)⩽c.g(n) for n>n0 in all case
+
+Hence, function g(n) is an upper bound for function f(n), as g(n) grows faster than f(n).
+
+Example
+Let us consider a given function, f(n)=4.n3+10.n2+5.n+1
+Considering g(n)=n3,
+
+f(n)⩽5.g(n) for all the values of n>2
+Hence, the complexity of f(n) can be represented as O(g(n)), i.e. O(n3)
+
+--------------------------------------------------------
+
+Examples:
+
+Min-Max:
+Algorithm: Max-Min-Element (numbers[]) 
+max := numbers[1] 
+min := numbers[1] 
+
+for i = 2 to n do 
+   if numbers[i] > max then  
+      max := numbers[i] 
+   if numbers[i] < min then  
+      min := numbers[i] 
+return (max, min) 
+
+The number of comparison in Naive method is 2n - 2.
+
+--------------------------------------------------------
+
+
+Binary Search:
+
+Algorithm: Binary-Search(numbers[], x, l, r)
+if l = r then  
+   return l  
+else 
+   m := ⌊(l + r) / 2⌋ 
+   if x ≤ numbers[m]  then 
+      return Binary-Search(numbers[], x, l, m) 
+   else 
+      return Binary-Search(numbers[], x, m+1, r) 
+
+See slides

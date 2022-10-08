@@ -1,0 +1,208 @@
+1.Which is the correct operator for X power y?
+a) X^y
+b) X**y 
+c) X^^y
+d) None of the mentioned
+
+2.What is the answer to this expression, 22 % 3 is?
+a) 7
+b) 1 
+c) 0
+d) 5
+
+
+3.Which of these in not a core data type?
+a) Lists
+b) Dictionary
+c) Tuples
+d) Class 
+
+
+4.What will be the output of the following Python code?
+>>>example = "snow world"
+>>>print("%s" % example[4:7])
+a.	 <space>wo 
+b.	 world
+c.	 sn
+d.	 Rl
+
+5.What will be the output of the following Python code?
+print("xyyzxyzxzxyy".count('yy'))
+a) 2
+b) 0
+c) error
+d) none of the mentioned
+
+
+6.What will be the output of the following Python code?
+print('ab12'.isalnum())
+a) True 
+b) False
+c) None
+d) Error
+
+9. What will be the output of the following Python code?
+>>>names = ['Amir', 'Bear', 'Charlton', 'Daman']
+>>>print(names[-1][-1])
+a) A
+b) Daman
+c) Error
+d) n 
+
+10. To add a new element to a list we use which command?
+a) list1.add(5)
+b) list1.append(5) 
+c) list1.addLast(5)
+d) list1.addEnd(5)
+
+
+11. Suppose t = (1, 2, 4, 3), which of the following is incorrect?
+a) print(t[3])
+b) t[3] = 45 
+c) print(max(t))
+d) print(len(t))
+
+12. What will be the output of the following Python code?
+d = {"john":40, "peter":45}
+d["john"]
+a) 40 
+b) 45
+c) “john”
+d) “peter”
+
+
+13. What will be the output of the following Python code snippet?
+>>> a={1:"A",2:"B",3:"C"}
+>>> del a
+a) method del doesn’t exist for the dictionary
+b) del deletes the values in the dictionary
+c) del deletes the entire dictionary *
+d) del deletes the keys in the dictionary
+
+
+14. What is output for −
+a = ['he', 'she', 'we']
+' '.join(a)
+A. ['heshewe']
+B. 'heshewe'  
+B. ['he she we']
+D.  'he she we'
+
+15. What will be the output of the following Python function?
+all([2,4,0,6])
+A. Error
+B. True
+C. False 
+D. 0
+
+16. What will be the output of the following Python code snippet?
+k = [print(i) for i in my_string if i not in "aeiou"]
+
+A.	prints all the vowels in my_string
+B.	prints all the consonants in my_string
+C.	prints all characters of my_string that aren’t vowels 
+D.	prints only on executing print(k)
+
+
+
+17. Consider the following: what is the final output
+a = True
+b = False
+c = True
+ 
+if not a or b:
+    print "a"
+elif not a or not b and c:
+    print "b"
+elif not a or b or not b and a:
+    print "c"
+else:
+    print "d"
+
+A. a
+B. b 
+C. c
+D. d
+
+18. What is the output of the following code:
+L = [1,2,3,4]
+def change(x):
+	return x ** 2
+L = map(change, L)
+print(L)
+
+A. [1,4,9,16] 
+B. [1,4,6,8]
+C. [1, 1, 1, 1]
+D. [1,2,3,4]
+
+19. Given a list L = [1,2,3,4], which piece of code can change the list
+to [1,2,9,4]?
+
+A. L = [x**2 if x == 3 else x for x in L]
+B. L = [x for x in L if x**2 and x == 3] 
+C. L = [if x == 3 x**2 else x for x in L]
+D. L = [for x in L x**2 if x == 3 else x]
+
+20. Opening a file in ‘a’ mode
+
+A. opens a file for reading
+B. opens a file for writing
+C. opens a file for appending at the end of the file 
+D. opens a file for exclusive creation
+
+21. Which Of The Following Can Be Used To Invoke The __init__ Method In B From A, Where A Is A Subclass Of B?
+A. super().__init__() 
+B. super().__init__(self)
+C. B.__init__()
+D. B.__init__(self)
+
+22. Which Of The Following Statements Are Correct About The Given Code Snippet?
+class A:
+    def __init__(self, i = 0):
+        self.i = i
+
+class B(A):
+    def __init__(self, j = 0):
+        self.j = j
+
+def main():
+    b = B()
+    print(b.i)
+    print(b.j)
+
+main()
+
+A. Class B inherits A, but the data field “i” in A is not inherited.
+B. Class B inherits A, thus automatically inherits all data fields in A. 
+C. When you create an object of B, you have to pass an argument such as B(5).
+D. The data field “j” cannot be accessed by object b.
+
+23: Which of the modules in python is best suited for data analysis?
+A. math
+B. pandas 
+C. matplotlib
+D. seaborn
+
+24. Which of the following plots best describes the frequency of occurance of a variable:
+
+A. Histogram 
+B. Box plot
+C. Violin plot
+D. Pie chart
+
+25. Consider the following table:
+
+index	year	temperature	rainfall	mosquitos
+0	2001	80		157		150
+1	2002	85		252		217
+2	2003	86		154		153
+3	2004	87		159		158
+
+
+Which of the following code snippets will return the temperature and rainfall of rows 2 and 3?
+
+A. df[['temperature','rainfall']][1:3] 
+B. df['temperature', 'rainfall'][1:3]
+C. df.iloc[1:3]
+D. df.iloc[1:3,1:2] 
